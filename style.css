@@ -16,7 +16,3 @@ body.is-ready .mark {
   opacity: 1;
   transform: translateY(0);
 }
-
-:root {
-  --logo-x: 0px; /* negative = left, positive = right */
-}
