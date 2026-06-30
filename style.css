@@ -1,30 +1,3 @@
-:root {
-  --bg: #121212;
-  --mark-size: clamp(132px, 12.75vw, 220px);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  background: var(--bg);
-  overflow: hidden;
-}
-
-.landing {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-}
-
 .mark {
   width: var(--mark-size);
   height: auto;
