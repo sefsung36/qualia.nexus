@@ -1,7 +1,7 @@
 :root {
   --bg: #121212;
   --mark-size: clamp(132px, 12.75vw, 220px);
-  --logo-x: 14px; /* negative = left, positive = right */
+  --logo-x: 64px; /* negative = left, positive = right */
   --logo-y: 0px;  /* negative = up, positive = down */
 }
 
