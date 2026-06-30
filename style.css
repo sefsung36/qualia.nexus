@@ -1,5 +1,6 @@
 :root {
-  --logo-x: 128px; /* negative = left, positive = right */
+  --mark-size: 128px;
+  --logo-x: -10px; /* negative = left, positive = right */
 }
 
 .mark {
@@ -7,12 +8,11 @@
   height: auto;
   display: block;
   opacity: 0;
-  transform: translateX(var(--logo-x));
-  transform: translateY(4px);
+  transform: translateX(var(--logo-x)) translateY(4px);
   transition: opacity 900ms ease, transform 900ms ease;
 }
 
 body.is-ready .mark {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(var(--logo-x)) translateY(0);
 }
