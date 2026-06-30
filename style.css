@@ -1,18 +1,55 @@
 :root {
-  --mark-size: 128px;
+  --bg: #121212;
+  --mark-size: clamp(132px, 12.75vw, 220px);
   --logo-x: -10px; /* negative = left, positive = right */
+  --logo-y: 0px;  /* negative = up, positive = down */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.landing {
+  width: 100%;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
 }
 
 .mark {
   width: var(--mark-size);
   height: auto;
   display: block;
-  opacity: 0;
-  transform: translateX(var(--logo-x)) translateY(4px);
-  transition: opacity 900ms ease, transform 900ms ease;
+  opacity: 1;
+  transform: translate(var(--logo-x), var(--logo-y));
 }
 
-body.is-ready .mark {
-  opacity: 1;
-  transform: translateX(var(--logo-x)) translateY(0);
+@media (prefers-reduced-motion: no-preference) {
+  .mark {
+    animation: mark-in 900ms ease both;
+  }
+
+  @keyframes mark-in {
+    from {
+      opacity: 0;
+      transform: translate(var(--logo-x), calc(var(--logo-y) + 4px));
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(var(--logo-x), var(--logo-y));
+    }
+  }
 }
