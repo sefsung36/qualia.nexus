@@ -1,5 +1,5 @@
 :root {
-  --logo-x: 32px; /* negative = left, positive = right */
+  --logo-x: 128px; /* negative = left, positive = right */
 }
 
 .mark {
